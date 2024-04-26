@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WATER QUALITY PREDICTION - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="static/css/aos.css">
+
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="static/css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="static/css/flaticon.css">
+    <link rel="stylesheet" href="static/css/icomoon.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("img_girl.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h2 {
+
+  text-shadow: 4px 4px 8px black;
+}
+
+</style>
+</head>
+
+
+<body>
+<form action="{{url_for('detection')}}" method="POST" >
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <b><a class="navbar-brand" href="index.html" style="color:red;font-size:40px">Water  <span style="color:black;"> Quality</span></a></b>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <b> <li class="nav-item "><a href="/" class="nav-link" style="color:black;">Home</a></li></b>
+                    <b> <li class="nav-item"><a href="/graph" class="nav-link"  style="color:black;">Graph</a></li></b>
+<!--                    <li class="nav-item "><a href="/training" class="nav-link" style="color:black;">training</a></li>-->
+<!--                    <li class="nav-item active"><a href="/detection" class="nav-link" style="color:black;">detection</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+
+
+    <section id="about" class="bg">
+        <div class="slider-item" style="background-image: url('static/images/w-7.jpg'); height: 100vh; background-size: cover;" >
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!--            <img src="static/images/slide-1.jpg" class="img-fluid" alt=""width="1500" height="400">-->
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content">
+                    </div></div></div>
+
+            <center><h1 style="margin-top:100px;">{{ msg|safe}}</h1></center>
+
+
+            <!--        <form action="/detection" method="POST" >-->
+            <table>
+                <div class="container">
+                    <div class = "row">
+                        <div class="col-md-1">
+                            <b><label for="ph" style=" margin-right: 10px; color:black;">ph</label></b>
+                        </div>
+                        <div class="col-md-3">
+                            <input name="ph" type="float" placeholder="ph" id="ph" style="margin-right: 30px;margin-left: 40px;">
+                        </div>
+                        <div class="col-md-1">
+                            <b><label for="Hardness" style=" margin-right: 10px; color:black;">Hardness</label></b>
+                        </div>
+                        <div class="col-md-3">
+
+                            <input name="Hardness" type="float" placeholder="Hardness" id="Hardness" style="margin-left: 40px;">
+                        </div>
+                        <div class="col-md-1">
+                           <b><label for="Solids" style=" margin-right: 10px; color:black;">Solids</label></b>
+                        </div>
+                        <div class="col-md-3">
+
+                            <input name="Solids" type="float" placeholder="Solids" style=" margin-bottom: 20px;" id="Solids">
+                        </div>
+                    </div>
+            </table>
+            <table>
+                <div class="container">
+                    <div class = "row">
+                        <div class="col-md-1">
+                            <b><label for="Chloramines" style=" margin-right: 20px; color:black;">Chloramines</label></b>
+                        </div>
+                        <div class="col-md-3">
+                            <input name="Chloramines" type="float" placeholder="Chloramines" id="Chloramines" style="margin-right: 20px;margin-left: 40px;">
+                        </div>
+                        <div class="col-md-1">
+                           <b><label for="Sulfate" style=" margin-right: 10px; color:black;">Sulfate</label></b>
+                        </div>
+                        <div class="col-md-3">
+
+                            <input name="Sulfate" type="float" placeholder="Sulfate" id="Sulfate" style="margin-left: 40px;">
+                        </div>
+                        <div class="col-md-1">
+                            <b><label for="Conductivity" style=" margin-right: 10px; color:black;">Conductivity</label></b>
+                        </div>
+                        <div class="col-md-3">
+
+                            <input name="Conductivity" type="float" placeholder="Conductivity" style=" margin-bottom: 20px;" id="Conductivity" style="margin-left: 30px;">
+                        </div>
+                    </div>
+            </table>
+
+
+            <table>
+                <div class="container">
+                    <div class = "row">
+                        <div class="col-md-1">
+                            <b><label for="Organic_carbon" style=" margin-right: 20px; color:black;">Organic_carbon</label></b>
+                        </div>
+                        <div class="col-md-3">
+                            <input name="Organic_carbon" type="float" placeholder="Organic_carbon" id="Organic_carbon" style="margin-right: 10px;margin-left: 40px;">
+                        </div>
+                        <div class="col-md-1">
+                          <b><label for="Trihalomethanes" style=" margin-right: 10px; color:black;">Trihalomethanes</label></b>
+                        </div>
+                        <div class="col-md-3">
+
+                            <input name="Trihalomethanes" type="float" placeholder="Trihalomethanes" id="Trihalomethanes" style="margin-left: 40px;">
+                        </div>
+                        <div class="col-md-1">
+                            <b><label for="Turbidity" style="margin-right: 10px; color:black;">Turbidity </label></b>
+                        </div>
+                        <div class="col-md-3">
+
+                            <input name="Turbidity" type="float"  placeholder="Turbidity" style=" margin-bottom: 20px; margin-right: 20px;" id="Turbidity">
+                        </div>
+                    </div>
+            </table>
+<!--            <center>-->
+<!--                &lt;!&ndash;                            <div class="col-md-1">&ndash;&gt;-->
+<!--                <label for="Time – diagnosis to last follow-up" style=" margin-right: 10px; color:white; ">Time – diagnosis to last follow-up</label>-->
+<!--                &lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--                &lt;!&ndash;                            <div class="col-md-3">&ndash;&gt;-->
+
+<!--                <input name="Time diagnosis to last follow up" type="number" placeholder="Time – diagnosis to last follow-up" style=" margin-bottom: 20px; margin-right: 220px;" id="Time – diagnosis to last follow-up">-->
+<!--                &lt;!&ndash;                            </div>&ndash;&gt;-->
+
+<!--            </center>-->
+
+
+
+<br><br><br>
+            <center>
+                <input type="submit"  value="submit">
+            </center>
+
+
+            <!--        </form>-->
+    </section>
+</form>
+
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery.easing.1.3.js"></script>
+<script src="static/js/jquery.waypoints.min.js"></script>
+<script src="static/js/jquery.stellar.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/aos.js"></script>
+<script src="static/js/jquery.animateNumber.min.js"></script>
+<script src="static/js/bootstrap-datepicker.js"></script>
+<script src="static/js/jquery.timepicker.min.js"></script>
+<script src="static/js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="static/js/google-map.js"></script>
+<script src="static/js/main.js"></script>
+
+</body>
+</html>
